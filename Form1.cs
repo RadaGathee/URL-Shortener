@@ -50,7 +50,6 @@ namespace urlShortener
 			this.shortUrl.Text = shortenedUrl ?? "Error shortening URL";
 		}
 
-
 		private async Task<string> ShortenUrl(string longUrl, string customName = null)
 		{
 			string apiUrl = "https://ulvis.net/api/write/get?url=" + longUrl + "&custom=" + customName + "&type=json";
