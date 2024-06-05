@@ -16,5 +16,31 @@ namespace urlShortener
 		{
 			InitializeComponent();
 		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void clear_Click(object sender, EventArgs e)
+		{
+			longUrl.Clear();
+			customName.Clear();
+		}
+
+		private void shortenBtn_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void clearBtn2_Click(object sender, EventArgs e)
+		{
+			shortUrl.Clear();
+		}
+
+		private void copyShortUrl_Click(object sender, EventArgs e)
+		{
+			Clipboard.SetText(shortUrl.ToString());
+		}
 	}
 }
