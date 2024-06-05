@@ -52,6 +52,7 @@
 			// 
 			// longUrl
 			// 
+			this.longUrl.ForeColor = System.Drawing.SystemColors.HotTrack;
 			this.longUrl.Location = new System.Drawing.Point(233, 168);
 			this.longUrl.Name = "longUrl";
 			this.longUrl.Size = new System.Drawing.Size(521, 22);
@@ -60,6 +61,7 @@
 			// 
 			// customName
 			// 
+			this.customName.ForeColor = System.Drawing.Color.DarkOrange;
 			this.customName.Location = new System.Drawing.Point(233, 252);
 			this.customName.Name = "customName";
 			this.customName.Size = new System.Drawing.Size(521, 22);
@@ -67,6 +69,7 @@
 			// 
 			// shortUrl
 			// 
+			this.shortUrl.ForeColor = System.Drawing.SystemColors.HotTrack;
 			this.shortUrl.Location = new System.Drawing.Point(233, 387);
 			this.shortUrl.Name = "shortUrl";
 			this.shortUrl.Size = new System.Drawing.Size(521, 22);
