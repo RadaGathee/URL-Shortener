@@ -47,6 +47,7 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -69,9 +70,11 @@
 			// 
 			// shortUrl
 			// 
+			this.shortUrl.BackColor = System.Drawing.Color.Honeydew;
 			this.shortUrl.ForeColor = System.Drawing.SystemColors.HotTrack;
 			this.shortUrl.Location = new System.Drawing.Point(233, 387);
 			this.shortUrl.Name = "shortUrl";
+			this.shortUrl.ReadOnly = true;
 			this.shortUrl.Size = new System.Drawing.Size(521, 22);
 			this.shortUrl.TabIndex = 0;
 			// 
@@ -92,9 +95,9 @@
 			this.label2.ForeColor = System.Drawing.Color.DarkGreen;
 			this.label2.Location = new System.Drawing.Point(230, 219);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(189, 16);
+			this.label2.Size = new System.Drawing.Size(131, 16);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "Add a Custom name (Optional)";
+			this.label2.Text = "Add a Custom name ";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
 			// shortenBtn
@@ -262,6 +265,17 @@
 			this.label10.Text = "u R L";
 			this.label10.Click += new System.EventHandler(this.label7_Click);
 			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.ForeColor = System.Drawing.Color.Sienna;
+			this.label11.Location = new System.Drawing.Point(367, 219);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(65, 16);
+			this.label11.TabIndex = 1;
+			this.label11.Text = "(Optional)";
+			this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -274,6 +288,7 @@
 			this.Controls.Add(this.clear);
 			this.Controls.Add(this.shortenBtn);
 			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label11);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label6);
@@ -287,6 +302,7 @@
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "URL Shortener ";
+			this.Load += new System.EventHandler(this.Form1_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
@@ -314,6 +330,7 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label11;
 	}
 }
 
