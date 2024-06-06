@@ -38,6 +38,8 @@ namespace urlShortener
 
 		private async void shortenBtn_Click(object sender, EventArgs e)
 		{
+			// Reset the flag before making the API call
+			isErrorShown = false;
 			var longUrlText = this.longUrl.Text;
 			var customNameText = this.customName.Text;
 
