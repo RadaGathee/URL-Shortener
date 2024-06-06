@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			this.longUrl = new System.Windows.Forms.TextBox();
+			this.longUrlBox = new System.Windows.Forms.TextBox();
 			this.customName = new System.Windows.Forms.TextBox();
 			this.shortUrl = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -40,25 +40,25 @@
 			this.clearBtn2 = new System.Windows.Forms.Button();
 			this.copyShortUrl = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// longUrl
+			// longUrlBox
 			// 
-			this.longUrl.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.longUrl.Location = new System.Drawing.Point(233, 168);
-			this.longUrl.Name = "longUrl";
-			this.longUrl.Size = new System.Drawing.Size(521, 22);
-			this.longUrl.TabIndex = 0;
-			this.longUrl.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.longUrlBox.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.longUrlBox.Location = new System.Drawing.Point(233, 168);
+			this.longUrlBox.Name = "longUrlBox";
+			this.longUrlBox.Size = new System.Drawing.Size(521, 22);
+			this.longUrlBox.TabIndex = 0;
+			this.longUrlBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 			// 
 			// customName
 			// 
@@ -181,6 +181,54 @@
 			this.panel1.Size = new System.Drawing.Size(142, 586);
 			this.panel1.TabIndex = 5;
 			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Segoe Print", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label9.Location = new System.Drawing.Point(-78, 419);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(165, 84);
+			this.label9.TabIndex = 6;
+			this.label9.Text = "u R L";
+			this.label9.Click += new System.EventHandler(this.label7_Click);
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Segoe Print", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label8.Location = new System.Drawing.Point(-26, 539);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(165, 84);
+			this.label8.TabIndex = 6;
+			this.label8.Text = "u R L";
+			this.label8.Click += new System.EventHandler(this.label7_Click);
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Bold);
+			this.label10.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label10.Location = new System.Drawing.Point(-73, 489);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(99, 50);
+			this.label10.TabIndex = 6;
+			this.label10.Text = "u R L";
+			this.label10.Click += new System.EventHandler(this.label7_Click);
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Bold);
+			this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label7.Location = new System.Drawing.Point(64, 489);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(99, 50);
+			this.label7.TabIndex = 6;
+			this.label7.Text = "u R L";
+			this.label7.Click += new System.EventHandler(this.label7_Click);
+			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -217,54 +265,6 @@
     "...............................................................\r\n";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Bold);
-			this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label7.Location = new System.Drawing.Point(64, 489);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(99, 50);
-			this.label7.TabIndex = 6;
-			this.label7.Text = "u R L";
-			this.label7.Click += new System.EventHandler(this.label7_Click);
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Font = new System.Drawing.Font("Segoe Print", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label8.Location = new System.Drawing.Point(-26, 539);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(165, 84);
-			this.label8.TabIndex = 6;
-			this.label8.Text = "u R L";
-			this.label8.Click += new System.EventHandler(this.label7_Click);
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Segoe Print", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label9.Location = new System.Drawing.Point(-78, 419);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(165, 84);
-			this.label9.TabIndex = 6;
-			this.label9.Text = "u R L";
-			this.label9.Click += new System.EventHandler(this.label7_Click);
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Bold);
-			this.label10.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label10.Location = new System.Drawing.Point(-73, 489);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(99, 50);
-			this.label10.TabIndex = 6;
-			this.label10.Text = "u R L";
-			this.label10.Click += new System.EventHandler(this.label7_Click);
-			// 
 			// label11
 			// 
 			this.label11.AutoSize = true;
@@ -296,7 +296,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.shortUrl);
 			this.Controls.Add(this.customName);
-			this.Controls.Add(this.longUrl);
+			this.Controls.Add(this.longUrlBox);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MinimumSize = new System.Drawing.Size(758, 515);
 			this.Name = "Form1";
@@ -312,7 +312,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.TextBox longUrl;
+		private System.Windows.Forms.TextBox longUrlBox;
 		private System.Windows.Forms.TextBox customName;
 		private System.Windows.Forms.TextBox shortUrl;
 		private System.Windows.Forms.Label label1;

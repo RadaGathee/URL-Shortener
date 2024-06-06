@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
+using System.Diagnostics;
+
 
 namespace urlShortener
 {
@@ -30,78 +32,45 @@ namespace urlShortener
 
 		private void clear_Click(object sender, EventArgs e)
 		{
-			longUrl.Clear();
+			longUrlBox.Clear();
 			customName.Clear();
 		}
-		// Flag to track if an error has been shown 
-		// if the user repeatedly clicks the shorten button, a lot of error message boxes will open- this limits it to one
-		private bool isErrorShown = false;
-
-		private async void shortenBtn_Click(object sender, EventArgs e)
+		private void shortenBtn_Click(object sender, EventArgs e)
 		{
-			// Reset the flag before making the API call
-			isErrorShown = false;
-			var longUrlText = this.longUrl.Text;
-			var customNameText = this.customName.Text;
-
-			if (string.IsNullOrWhiteSpace(longUrlText))
-			{
-				MessageBox.Show("Please enter a long URL.");
-				return;
-			}
-
-			var shortenedUrl = await ShortenUrl(longUrlText, customNameText);
-			this.shortUrl.Text = shortenedUrl ?? "Error shortening URL";
-		}
-
-		private async Task<string> ShortenUrl(string longUrl, string customName = null)
-		{
-			string apiUrl = "https://ulvis.net/api.php?url=" + Uri.EscapeDataString(longUrl);
-
-			if (!string.IsNullOrWhiteSpace(customName))
-			{
-				apiUrl += "&custom=" + Uri.EscapeDataString(customName);
-			}
-
-			apiUrl += "&private=1&type=json";
+			string longUrl = longUrlBox.Text;
+			string apiUrl = $"https://ulvis.net/API/write/get?url={longUrl}";
 
 			try
 			{
-				HttpResponseMessage response = await client.GetAsync(apiUrl);
-				if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+				// Run curl command
+				string curlCommand = $"curl \"{apiUrl}\"";
+				ProcessStartInfo startInfo = new ProcessStartInfo
 				{
-					MessageBox.Show("Error 403: Forbidden. The server refused to authorize the request.");
-					return null;
-				}
-				response.EnsureSuccessStatusCode();
-				string responseBody = await response.Content.ReadAsStringAsync();
+					FileName = "curl",
+					Arguments = curlCommand,
+					RedirectStandardOutput = true,
+					UseShellExecute = false,
+					CreateNoWindow = true
+				};
 
-				var json = JObject.Parse(responseBody);
-				if (json["success"]?.ToString() == "1")
+				using (Process process = Process.Start(startInfo))
 				{
-					return json["data"]["url"]?.ToString();
-				}
-				else
-				{
-					var error = json["error"];
-					if (error != null)
+					if (process != null)
 					{
-						var errorMsg = error["msg"]?.ToString();
-						if (!string.IsNullOrWhiteSpace(errorMsg))
-						{
-							MessageBox.Show($"Error: {errorMsg}");
-						}
+						string output = process.StandardOutput.ReadToEnd();
+						shortUrl.Text = output;
 					}
-					return null;
+					else
+					{
+						MessageBox.Show("Failed to start curl process.");
+					}
 				}
 			}
-			catch (HttpRequestException e)
+			catch (Exception ex)
 			{
-				MessageBox.Show($"Request error: {e.Message}");
-				return null;
+				MessageBox.Show($"Error: {ex.Message}");
 			}
 		}
-
 
 		private void clearBtn2_Click(object sender, EventArgs e)
 		{
@@ -110,7 +79,7 @@ namespace urlShortener
 
 		private void copyShortUrl_Click(object sender, EventArgs e)
 		{
-			Clipboard.SetText(shortUrl.ToString());
+			Clipboard.SetText(shortUrl.Text);
 		}
 
 		private void label7_Click(object sender, EventArgs e)
