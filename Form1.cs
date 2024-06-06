@@ -33,7 +33,8 @@ namespace urlShortener
 			longUrl.Clear();
 			customName.Clear();
 		}
-		// Flag to track if an error has been shown - if the user repeatedly clicks the shorten button, a lot of error message boxes will open- this limits it to one
+		// Flag to track if an error has been shown 
+		// if the user repeatedly clicks the shorten button, a lot of error message boxes will open- this limits it to one
 		private bool isErrorShown = false;
 
 		private async void shortenBtn_Click(object sender, EventArgs e)
@@ -48,11 +49,12 @@ namespace urlShortener
 				MessageBox.Show("Please enter a long URL.");
 				return;
 			}
-			var shortenedUrl = ShortenUrl(longUrlText, customNameText);
+
+			var shortenedUrl = await ShortenUrl(longUrlText, customNameText);
 			this.shortUrl.Text = shortenedUrl ?? "Error shortening URL";
 		}
 
-		private string ShortenUrl(string longUrl, string customName = null)
+		private async Task<string> ShortenUrl(string longUrl, string customName = null)
 		{
 			string apiUrl = "https://ulvis.net/api.php?url=" + Uri.EscapeDataString(longUrl);
 
@@ -65,13 +67,19 @@ namespace urlShortener
 
 			try
 			{
-				WebGetMethod webGet = new WebGetMethod();
-				string responseBody = webGet.Get(apiUrl);
+				HttpResponseMessage response = await client.GetAsync(apiUrl);
+				if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+				{
+					MessageBox.Show("Error 403: Forbidden. The server refused to authorize the request.");
+					return null;
+				}
+				response.EnsureSuccessStatusCode();
+				string responseBody = await response.Content.ReadAsStringAsync();
 
 				var json = JObject.Parse(responseBody);
 				if (json["success"]?.ToString() == "1")
 				{
-					return json["url"]?.ToString();
+					return json["data"]["url"]?.ToString();
 				}
 				else
 				{
@@ -87,7 +95,7 @@ namespace urlShortener
 					return null;
 				}
 			}
-			catch (WebException e)
+			catch (HttpRequestException e)
 			{
 				MessageBox.Show($"Request error: {e.Message}");
 				return null;
