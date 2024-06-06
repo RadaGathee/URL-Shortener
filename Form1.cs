@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Net;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,12 +34,10 @@ namespace urlShortener
 			customName.Clear();
 		}
 		// Flag to track if an error has been shown - if the user repeatedly clicks the shorten button, a lot of error message boxes will open- this limits it to one
-		private bool isErrorShown = false; 
+		private bool isErrorShown = false;
 
 		private async void shortenBtn_Click(object sender, EventArgs e)
 		{
-			// Reset the flag before making the API call
-			isErrorShown = false;
 			var longUrlText = this.longUrl.Text;
 			var customNameText = this.customName.Text;
 
@@ -46,44 +46,46 @@ namespace urlShortener
 				MessageBox.Show("Please enter a long URL.");
 				return;
 			}
-			var shortenedUrl = await ShortenUrl(longUrlText, customNameText);
+			var shortenedUrl = ShortenUrl(longUrlText, customNameText);
 			this.shortUrl.Text = shortenedUrl ?? "Error shortening URL";
 		}
 
-		private async Task<string> ShortenUrl(string longUrl, string customName = null)
+		private string ShortenUrl(string longUrl, string customName = null)
 		{
-			string apiUrl = "https://ulvis.net/api/write/get?url=" + longUrl + "&custom=" + customName + "&type=json";
+			string apiUrl = "https://ulvis.net/api.php?url=" + Uri.EscapeDataString(longUrl);
+
+			if (!string.IsNullOrWhiteSpace(customName))
+			{
+				apiUrl += "&custom=" + Uri.EscapeDataString(customName);
+			}
+
+			apiUrl += "&private=1&type=json";
 
 			try
 			{
-				var response = await client.GetAsync(apiUrl);
-				response.EnsureSuccessStatusCode();
-				var responseBody = await response.Content.ReadAsStringAsync();
+				WebGetMethod webGet = new WebGetMethod();
+				string responseBody = webGet.Get(apiUrl);
 
 				var json = JObject.Parse(responseBody);
 				if (json["success"]?.ToString() == "1")
 				{
-					return json["data"]["url"]?.ToString();
+					return json["url"]?.ToString();
 				}
 				else
 				{
-					if (!isErrorShown)
+					var error = json["error"];
+					if (error != null)
 					{
-						var error = json["error"];
-						if (error != null)
+						var errorMsg = error["msg"]?.ToString();
+						if (!string.IsNullOrWhiteSpace(errorMsg))
 						{
-							var errorMsg = error["msg"]?.ToString();
-							if (!string.IsNullOrWhiteSpace(errorMsg))
-							{
-								isErrorShown = true;
-								MessageBox.Show($"Error: {errorMsg}");
-							}
+							MessageBox.Show($"Error: {errorMsg}");
 						}
 					}
 					return null;
 				}
 			}
-			catch (HttpRequestException e)
+			catch (WebException e)
 			{
 				MessageBox.Show($"Request error: {e.Message}");
 				return null;
