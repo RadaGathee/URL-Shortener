@@ -53,6 +53,10 @@
 			this.label13 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label17 = new System.Windows.Forms.Label();
+			this.label18 = new System.Windows.Forms.Label();
+			this.label19 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -340,12 +344,64 @@
 			this.label15.Text = "Maximum number of clicks \r\nbefore the url becomes \r\ninactive - Can edit in codes";
 			this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label16.ForeColor = System.Drawing.Color.DarkGreen;
+			this.label16.Location = new System.Drawing.Point(878, 31);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(45, 23);
+			this.label16.TabIndex = 21;
+			this.label16.Text = "u R L";
+			this.label16.Click += new System.EventHandler(this.label16_Click_1);
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label17.ForeColor = System.Drawing.Color.DarkGreen;
+			this.label17.Location = new System.Drawing.Point(957, 52);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(45, 23);
+			this.label17.TabIndex = 22;
+			this.label17.Text = "u R L";
+			this.label17.Click += new System.EventHandler(this.label17_Click_1);
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label18.ForeColor = System.Drawing.Color.DarkGreen;
+			this.label18.Location = new System.Drawing.Point(850, -6);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(60, 30);
+			this.label18.TabIndex = 23;
+			this.label18.Text = "u R L";
+			this.label18.Click += new System.EventHandler(this.label18_Click);
+			// 
+			// label19
+			// 
+			this.label19.AutoSize = true;
+			this.label19.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label19.ForeColor = System.Drawing.Color.DarkGreen;
+			this.label19.Location = new System.Drawing.Point(913, -13);
+			this.label19.Name = "label19";
+			this.label19.Size = new System.Drawing.Size(131, 65);
+			this.label19.TabIndex = 24;
+			this.label19.Text = "u R L";
+			this.label19.Click += new System.EventHandler(this.label19_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.ClientSize = new System.Drawing.Size(975, 586);
+			this.Controls.Add(this.label16);
+			this.Controls.Add(this.label17);
+			this.Controls.Add(this.label18);
+			this.Controls.Add(this.label19);
 			this.Controls.Add(this.nextPage);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.copyShortUrl);
@@ -405,6 +461,10 @@
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.Label label19;
 	}
 }
 

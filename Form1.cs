@@ -158,5 +158,25 @@ namespace urlShortener
 		{
 
 		}
+
+		private void label18_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label17_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label16_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label19_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
