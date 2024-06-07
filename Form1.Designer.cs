@@ -48,6 +48,7 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
+			this.nextPage = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -276,12 +277,27 @@
 			this.label11.Text = "(Optional)";
 			this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
+			// nextPage
+			// 
+			this.nextPage.BackColor = System.Drawing.Color.LimeGreen;
+			this.nextPage.FlatAppearance.BorderSize = 0;
+			this.nextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.nextPage.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.nextPage.Location = new System.Drawing.Point(671, 507);
+			this.nextPage.Name = "nextPage";
+			this.nextPage.Size = new System.Drawing.Size(83, 32);
+			this.nextPage.TabIndex = 6;
+			this.nextPage.Text = "Next --->";
+			this.nextPage.UseVisualStyleBackColor = false;
+			this.nextPage.Click += new System.EventHandler(this.nextPage_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.ClientSize = new System.Drawing.Size(975, 586);
+			this.Controls.Add(this.nextPage);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.copyShortUrl);
 			this.Controls.Add(this.clearBtn2);
@@ -331,6 +347,7 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Button nextPage;
 	}
 }
 

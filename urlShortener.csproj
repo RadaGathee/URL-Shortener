@@ -63,7 +63,6 @@
     <Compile Include="secondApi.Designer.cs">
       <DependentUpon>secondApi.cs</DependentUpon>
     </Compile>
-    <Compile Include="WebGetMethod.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
