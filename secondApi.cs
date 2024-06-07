@@ -1,36 +1,32 @@
-﻿using System;
-using System.IO;
-using System.Net;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
-using System.Diagnostics;
-
 
 namespace urlShortener
 {
-	public partial class Form1 : Form
+	public partial class secondApi : UserControl
 	{
 		private static readonly HttpClient client = new HttpClient();
 		private DateTime lastRequestTime = DateTime.MinValue;
 		private const int RequestLimit = 10; // Max requests per min is 15
 		private const int RateLimitDurationSeconds = 60;
 		private int requestsSentThisMinute = 0;
-		public Form1()
+		public secondApi()
 		{
 			InitializeComponent();
 			shortenBtn.Click += new EventHandler(shortenBtn_Click);
 		}
 
-		private void textBox1_TextChanged(object sender, EventArgs e)
+		private void secondApi_Load(object sender, EventArgs e)
 		{
 
 		}
@@ -110,6 +106,26 @@ namespace urlShortener
 
 		private void copyShortUrl_Click(object sender, EventArgs e)
 		{
+			Clipboard.SetText(shortUrl.Text);
+		}
+
+		private void backPage_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+		}
+
+		private void nextPage_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label11_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void copyShortUrl_Click_1(object sender, EventArgs e)
+		{
 			if (string.IsNullOrEmpty(shortUrl.Text))
 			{
 				MessageBox.Show("Please shorten the URL first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -120,43 +136,9 @@ namespace urlShortener
 			}
 		}
 
-		private void label7_Click(object sender, EventArgs e)
+		private void ClearTwo_Click(object sender, EventArgs e)
 		{
-
-		}
-
-		private void Form1_Load(object sender, EventArgs e)
-		{
-
-		}
-
-		private void nextPage_Click(object sender, EventArgs e)
-		{
-			secondApi secondApi = new secondApi();
-			secondApi.Location = new System.Drawing.Point(145, 0);
-			this.Controls.Add(secondApi);
-			secondApi.BringToFront();
-
-		}
-
-		private void label16_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label17_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label14_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void secondApi1_Load(object sender, EventArgs e)
-		{
-
+			shortUrl.Clear();
 		}
 	}
 }
