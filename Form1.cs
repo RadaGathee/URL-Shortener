@@ -34,14 +34,14 @@ namespace urlShortener
 		private void clear_Click(object sender, EventArgs e)
 		{
 			longUrlBox.Clear();
-			customName.Clear();
+			passwordValue.Clear();
 		}
 		private async void shortenBtn_Click(object sender, EventArgs e)
 		{
 			string longUrl = longUrlBox.Text;
-			string customAlias = customName.Text;
-			string password = "edfhj@24535WDG";  // Example password
-			int maxClicks = 10;  // Example max clicks
+			string customAlias = "";
+			string password = passwordValue.Text;  // Example password abcd@1234
+			int maxClicks = 15;  // Example max clicks
 
 			var payload = new Dictionary<string, string>
 			{
@@ -99,8 +99,30 @@ namespace urlShortener
 
 		private void nextPage_Click(object sender, EventArgs e)
 		{
-			var secondApi = new secondApi();
-			secondApi.Show();
+			secondApi secondApi = new secondApi();
+			secondApi.Location = new System.Drawing.Point(145, 0);
+			this.Controls.Add(secondApi);
+			secondApi.BringToFront();
+
+		}
+
+		private void label16_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label17_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label14_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void secondApi1_Load(object sender, EventArgs e)
+		{
 
 		}
 	}

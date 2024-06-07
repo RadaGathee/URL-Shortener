@@ -30,7 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.longUrlBox = new System.Windows.Forms.TextBox();
-			this.customName = new System.Windows.Forms.TextBox();
+			this.passwordValue = new System.Windows.Forms.TextBox();
 			this.shortUrl = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.nextPage = new System.Windows.Forms.Button();
+			this.label12 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -61,13 +62,13 @@
 			this.longUrlBox.TabIndex = 0;
 			this.longUrlBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 			// 
-			// customName
+			// passwordValue
 			// 
-			this.customName.ForeColor = System.Drawing.Color.DarkOrange;
-			this.customName.Location = new System.Drawing.Point(233, 252);
-			this.customName.Name = "customName";
-			this.customName.Size = new System.Drawing.Size(521, 22);
-			this.customName.TabIndex = 0;
+			this.passwordValue.ForeColor = System.Drawing.Color.DarkOrange;
+			this.passwordValue.Location = new System.Drawing.Point(233, 252);
+			this.passwordValue.Name = "passwordValue";
+			this.passwordValue.Size = new System.Drawing.Size(521, 22);
+			this.passwordValue.TabIndex = 0;
 			// 
 			// shortUrl
 			// 
@@ -96,9 +97,9 @@
 			this.label2.ForeColor = System.Drawing.Color.DarkGreen;
 			this.label2.Location = new System.Drawing.Point(230, 219);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(131, 16);
+			this.label2.Size = new System.Drawing.Size(106, 16);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "Add a Custom name ";
+			this.label2.Text = "Add a Password";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
 			// shortenBtn
@@ -270,11 +271,11 @@
 			// 
 			this.label11.AutoSize = true;
 			this.label11.ForeColor = System.Drawing.Color.Sienna;
-			this.label11.Location = new System.Drawing.Point(367, 219);
+			this.label11.Location = new System.Drawing.Point(408, 219);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(65, 16);
+			this.label11.Size = new System.Drawing.Size(165, 16);
 			this.label11.TabIndex = 1;
-			this.label11.Text = "(Optional)";
+			this.label11.Text = "(Min 8 characters, have @)";
 			this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
 			// nextPage
@@ -291,6 +292,17 @@
 			this.nextPage.UseVisualStyleBackColor = false;
 			this.nextPage.Click += new System.EventHandler(this.nextPage_Click);
 			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.ForeColor = System.Drawing.Color.Sienna;
+			this.label12.Location = new System.Drawing.Point(337, 219);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(65, 16);
+			this.label12.TabIndex = 1;
+			this.label12.Text = "(Optional)";
+			this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -304,6 +316,7 @@
 			this.Controls.Add(this.clear);
 			this.Controls.Add(this.shortenBtn);
 			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label12);
 			this.Controls.Add(this.label11);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label5);
@@ -311,7 +324,7 @@
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.shortUrl);
-			this.Controls.Add(this.customName);
+			this.Controls.Add(this.passwordValue);
 			this.Controls.Add(this.longUrlBox);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MinimumSize = new System.Drawing.Size(758, 515);
@@ -329,7 +342,7 @@
 		#endregion
 
 		private System.Windows.Forms.TextBox longUrlBox;
-		private System.Windows.Forms.TextBox customName;
+		private System.Windows.Forms.TextBox passwordValue;
 		private System.Windows.Forms.TextBox shortUrl;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
@@ -348,6 +361,7 @@
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Button nextPage;
+		private System.Windows.Forms.Label label12;
 	}
 }
 

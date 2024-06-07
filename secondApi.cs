@@ -30,14 +30,14 @@ namespace urlShortener
 		private void clear_Click(object sender, EventArgs e)
 		{
 			longUrlBox.Clear();
-			customName.Clear();
+			passwordValue.Clear();
 		}
 		private async void shortenBtn_Click(object sender, EventArgs e)
 		{
 			string longUrl = longUrlBox.Text;
-			string customAlias = customName.Text;
-			string password = "edfhj@24535WDG";  // Example password
-			int maxClicks = 10;  // Example max clicks
+			string customAlias = "";
+			string password = passwordValue.Text;  // Example password abcd@1234
+			int maxClicks = 15;  // Example max clicks
 
 			var payload = new Dictionary<string, string>
 			{
@@ -85,8 +85,17 @@ namespace urlShortener
 
 		private void backPage_Click(object sender, EventArgs e)
 		{
-			var myForm = new Form1();
-			myForm.Show();
+			this.Hide();
+		}
+
+		private void nextPage_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label11_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
