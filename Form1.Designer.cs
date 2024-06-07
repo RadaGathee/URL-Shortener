@@ -50,6 +50,9 @@
 			this.label11 = new System.Windows.Forms.Label();
 			this.nextPage = new System.Windows.Forms.Button();
 			this.label12 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -273,9 +276,9 @@
 			this.label11.ForeColor = System.Drawing.Color.Sienna;
 			this.label11.Location = new System.Drawing.Point(408, 219);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(165, 16);
+			this.label11.Size = new System.Drawing.Size(251, 16);
 			this.label11.TabIndex = 1;
-			this.label11.Text = "(Min 8 characters, have @)";
+			this.label11.Text = "(Min 8 characters, have @, number, letter)";
 			this.label11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
 			// nextPage
@@ -303,6 +306,40 @@
 			this.label12.Text = "(Optional)";
 			this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Segoe Print", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label13.ForeColor = System.Drawing.Color.DarkGreen;
+			this.label13.Location = new System.Drawing.Point(789, 123);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(66, 40);
+			this.label13.TabIndex = 1;
+			this.label13.Text = "N/B";
+			this.label13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.ForeColor = System.Drawing.Color.DarkGreen;
+			this.label14.Location = new System.Drawing.Point(775, 168);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(110, 16);
+			this.label14.TabIndex = 1;
+			this.label14.Text = "Max clicks = 1000";
+			this.label14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.ForeColor = System.Drawing.Color.DarkGreen;
+			this.label15.Location = new System.Drawing.Point(775, 194);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(166, 48);
+			this.label15.TabIndex = 1;
+			this.label15.Text = "Maximum number of clicks \r\nbefore the url becomes \r\ninactive - Can edit in codes";
+			this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -321,6 +358,9 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label6);
+			this.Controls.Add(this.label13);
+			this.Controls.Add(this.label15);
+			this.Controls.Add(this.label14);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.shortUrl);
@@ -362,6 +402,9 @@
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Button nextPage;
 		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Label label15;
 	}
 }
 
