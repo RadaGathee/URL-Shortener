@@ -51,15 +51,15 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
-			this.label13 = new System.Windows.Forms.Label();
-			this.label14 = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
 			this.label18 = new System.Windows.Forms.Label();
 			this.label19 = new System.Windows.Forms.Label();
 			this.label20 = new System.Windows.Forms.Label();
 			this.ClearTwo = new System.Windows.Forms.Button();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
 			this.SuspendLayout();
@@ -295,50 +295,6 @@
 			this.label12.TabIndex = 20;
 			this.label12.Text = "u R L";
 			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label13.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label13.Location = new System.Drawing.Point(786, -16);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(131, 65);
-			this.label13.TabIndex = 20;
-			this.label13.Text = "u R L";
-			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label14.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label14.Location = new System.Drawing.Point(723, -9);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(60, 30);
-			this.label14.TabIndex = 20;
-			this.label14.Text = "u R L";
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label15.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label15.Location = new System.Drawing.Point(830, 49);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(45, 23);
-			this.label15.TabIndex = 20;
-			this.label15.Text = "u R L";
-			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label16.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label16.Location = new System.Drawing.Point(751, 28);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(45, 23);
-			this.label16.TabIndex = 20;
-			this.label16.Text = "u R L";
-			// 
 			// label17
 			// 
 			this.label17.AutoSize = true;
@@ -398,6 +354,50 @@
 			this.ClearTwo.Text = "Clear";
 			this.ClearTwo.UseVisualStyleBackColor = false;
 			this.ClearTwo.Click += new System.EventHandler(this.ClearTwo_Click);
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label13.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label13.Location = new System.Drawing.Point(786, -16);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(131, 65);
+			this.label13.TabIndex = 20;
+			this.label13.Text = "u R L";
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label16.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label16.Location = new System.Drawing.Point(751, 28);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(45, 23);
+			this.label16.TabIndex = 20;
+			this.label16.Text = "u R L";
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label15.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label15.Location = new System.Drawing.Point(830, 49);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(45, 23);
+			this.label15.TabIndex = 20;
+			this.label15.Text = "u R L";
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label14.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.label14.Location = new System.Drawing.Point(723, -9);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(60, 30);
+			this.label14.TabIndex = 20;
+			this.label14.Text = "u R L";
 			// 
 			// secondApi
 			// 
@@ -467,14 +467,14 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.Label label13;
-		private System.Windows.Forms.Label label14;
-		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.Label label19;
 		private System.Windows.Forms.Label label20;
 		private System.Windows.Forms.Button ClearTwo;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label label14;
 	}
 }
