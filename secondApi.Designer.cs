@@ -380,11 +380,11 @@
 			// label15
 			// 
 			this.label15.AutoSize = true;
-			this.label15.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label15.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label15.ForeColor = System.Drawing.SystemColors.HighlightText;
-			this.label15.Location = new System.Drawing.Point(830, 49);
+			this.label15.Location = new System.Drawing.Point(821, 49);
 			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(45, 23);
+			this.label15.Size = new System.Drawing.Size(53, 26);
 			this.label15.TabIndex = 20;
 			this.label15.Text = "u R L";
 			// 
