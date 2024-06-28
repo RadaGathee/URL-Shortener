@@ -373,7 +373,7 @@
 			this.label18.AutoSize = true;
 			this.label18.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label18.ForeColor = System.Drawing.Color.DarkGreen;
-			this.label18.Location = new System.Drawing.Point(850, -6);
+			this.label18.Location = new System.Drawing.Point(850, -5);
 			this.label18.Name = "label18";
 			this.label18.Size = new System.Drawing.Size(60, 30);
 			this.label18.TabIndex = 23;
