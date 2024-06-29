@@ -385,7 +385,7 @@
 			this.label19.AutoSize = true;
 			this.label19.Font = new System.Drawing.Font("Segoe Print", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label19.ForeColor = System.Drawing.Color.DarkGreen;
-			this.label19.Location = new System.Drawing.Point(913, -13);
+			this.label19.Location = new System.Drawing.Point(914, -14);
 			this.label19.Name = "label19";
 			this.label19.Size = new System.Drawing.Size(131, 65);
 			this.label19.TabIndex = 24;
